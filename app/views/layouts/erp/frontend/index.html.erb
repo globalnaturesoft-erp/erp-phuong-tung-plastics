@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <title>Trang Chủ | Công Ty TNHH MTV Phương Tùng</title>
+    <%= favicon_link_tag '/frontend/image/favicon.png', rel: 'icon' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- CSS Part Start-->
+    <%= stylesheet_link_tag "/frontend/css/stylesheet.css" %>
+    <%= stylesheet_link_tag "/frontend/css/slideshow.css" %>
+    <%= stylesheet_link_tag "/frontend/css/flexslider.css" %>
+    <%= stylesheet_link_tag "/frontend/js/colorbox/colorbox.css" %>
+    <%= stylesheet_link_tag "/frontend/css/carousel.css" %>
+    <%= stylesheet_link_tag "/frontend/css/custom.css" %>
+    <!-- CSS Part End-->
+    <!-- JS Part Start-->
+    <%= javascript_include_tag "/frontend/js/jquery-1.7.1.min.js" %>
+    <%= javascript_include_tag "/frontend/js/jquery.nivo.slider.pack.js" %>
+    <%= javascript_include_tag "/frontend/js/jquery.flexslider.js" %>
+    <%= javascript_include_tag "/frontend/js/jquery.easing-1.3.min.js" %>
+    <%= javascript_include_tag "/frontend/js/jquery.jcarousel.min.js" %>
+    <%= javascript_include_tag "/frontend/js/colorbox/jquery.colorbox-min.js" %>
+    <%= javascript_include_tag "/frontend/js/tabs.js" %>
+    <%= javascript_include_tag "/frontend/js/cloud_zoom.js" %>
+    <%= javascript_include_tag "/frontend/js/jquery.dcjqaccordion.js" %>
+    <%= javascript_include_tag "/frontend/js/custom.js" %>
+    <%= javascript_include_tag "/frontend/js/html5.js" %>
+    <!-- JS Part End-->
+    <!-- Google Fonts (Droid Sans) Start -->
+    <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Roboto:400,500,700,900" %>
+    <!-- Google Fonts (Droid Sans) End -->
+</head>
+<body>
+<div class="wrapper-box">
+  <div class="main-wrapper">
+    
+    <!--Header Part Start-->
+    <%= render "erp/phuong_tung_plastics/frontend/modules/header" %>
+    <!--Header Part End-->
+    
+    <div id="container">      
+        <%= yield %>
+      <div class="clear"></div>
+    </div>
+    
+  </div>
+  <!--Footer Part Start-->
+  <%= render "erp/phuong_tung_plastics/frontend/modules/footer" %>
+  <!--Footer Part End-->
+</div>
+</body>
+</html>

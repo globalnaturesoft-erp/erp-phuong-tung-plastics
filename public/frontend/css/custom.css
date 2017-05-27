@@ -1,0 +1,35 @@
+#footer .powered_text {
+  text-align: left;
+}
+#menu {
+  background: #3598dc;
+}
+#menu > ul > li:hover > a {
+  color: #fff;
+  background: #e43a45;
+}
+.box-product .sales_price {
+  display: block;
+  margin: 5px 0 0 0;
+  padding: 0 8px;
+  color: #555555;
+  font-style: italic;
+  font-size: 11px;
+}
+.product-info .price-old, .product-grid .price-old {
+  color: #555555;
+  font-style: italic;
+}
+#column-left .box-product .sales_price, #column-right .box-product .sales_price {
+  float: left;
+  padding: 0 10px 0 0;
+  margin: 0px 0 2px 0;
+  font-size: 12px;
+}
+.box-product .name a:hover, .product-grid .name a:hover {
+  color: #3598dc;
+  text-decoration: none;
+}
+h1, select, input[type='text'], input[type='password'], textarea {
+  font-family: Roboto, sans-serif;
+}

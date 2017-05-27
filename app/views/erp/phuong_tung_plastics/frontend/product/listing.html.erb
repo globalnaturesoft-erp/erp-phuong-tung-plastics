@@ -1,0 +1,62 @@
+<div id="column-left">
+  <!--Bestsellers Part Start-->
+  <%= render "erp/phuong_tung_plastics/frontend/modules/bestseller" %>
+  <!--Bestsellers Part End-->
+  <!--Latest Product Start-->
+  <%= render "erp/phuong_tung_plastics/frontend/modules/newest" %>
+  <!--Latest Product End-->
+  <!--Banner Start-->
+  <div class="banner">
+    <div>
+      <%= link_to image_tag("/frontend/image/product/small-banner1-220x350.jpg", alt: "", title: ""), "", title: "" %></div>
+  </div>
+  <!--Banner End-->  
+</div>
+<!--Middle Part Start-->
+<div id="content">
+  <!--Breadcrumb Part Start-->
+  <div class="breadcrumb"><%= link_to "Trang Chủ", erp_phuong_tung_plastics.root_path %> &raquo; <%= link_to "Bồn Nhựa Long Nhiên Dạng Đứng", "javascript:void(0)" %></div>
+  <!--Breadcrumb Part End-->
+  <h1>Bồn Nhựa Long Nhiên Dạng Đứng</h1>
+  <div class="product-filter">
+    <div class="sort"><b>Sort By:</b>
+      <select>
+        <option value="" selected="selected">Mặc định</option>
+        <option value="">Tên (A - Z)</option>
+        <option value="">Tên (Z - A)</option>
+        <option value="">Giá (Cao &gt; Thấp)</option>
+        <option value="">Giá (Thấp &gt; Cao)</option>
+      </select>
+    </div>
+  </div>
+  <!--Product Grid Start-->
+  <div class="product-grid">
+    <% (0..19).each do |product| %>
+    <div>
+      <div class="image">
+        <%= link_to image_tag("/frontend/image/product/long-nhien-03.png", title: "", alt: ""), erp_phuong_tung_plastics.product_detail_path, title: "" %>
+      </div>
+      <div class="name">
+        <%= link_to "Bồn nước nhựa Long Nhiên 300 lít (Đứng)", erp_phuong_tung_plastics.product_detail_path, title: "" %>
+      </div>      
+      <div class="price">
+        <span class="price-old">400,000đ</span>
+        <span class="price-new">350,000đ</span>
+      </div>
+    </div>
+    <% end %>
+  </div>
+  <!--Product Grid End-->
+  <!--Pagination Part Start-->
+  <div class="pagination">
+    <div class="links">
+      <b>←</b>
+      <b>1</b>
+      <a href="">2</a>
+      <a href="">3</a>
+      <a href="">→</a>
+    </div>
+    <div class="results">Hiển thị 20/22 sản phẩm.</div>
+  </div>
+  <!--Pagination Part End-->
+</div>

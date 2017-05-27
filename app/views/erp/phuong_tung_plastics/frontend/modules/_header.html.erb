@@ -1,0 +1,58 @@
+<header id="header">
+  <div class="htop">
+    <div class="links">
+      <%= link_to "Trang chủ", erp_phuong_tung_plastics.root_path %>
+      <%= link_to "Giới thiệu", erp_phuong_tung_plastics.about_us_path %>
+      <%= link_to "Liên hệ chúng tôi", erp_phuong_tung_plastics.contact_path %>
+    </div>
+  </div>
+  <section class="hsecond">
+    <div id="logo">
+        <%= link_to image_tag("/frontend/image/logo.png", title: "Quay về trang chủ", alt: "Quay về trang chủ"), erp_phuong_tung_plastics.root_path, title: "Quay về trang chủ" %>
+    </div>
+    <section id="cart">
+      <%= link_to image_tag("/frontend/image/header-banner.png", alt: "", title: ""), "", title: "" %>
+    </section>
+  </section>
+  <!--Top Menu(Horizontal Categories) Start-->
+  <nav id="menu">
+    <ul>
+      <li class="home"><a title="Quay về trang chủ" href="<%= erp_phuong_tung_plastics.root_path %>"><span>Trang Chủ</span></a></li>          
+      <li><%= link_to "Bồn nhựa Long Nhiên dạng đứng", erp_phuong_tung_plastics.product_listing_path %></li>
+      <li><%= link_to "Bồn nhựa Long Nhiên dạng ngang", erp_phuong_tung_plastics.product_listing_path %></li>
+      <li><%= link_to "Bồn nhựa thương hiệu khác", "javascript:void(0)" %>
+        <div>
+          <ul>
+            <li><%= link_to "Bồn nhựa dạng đứng", erp_phuong_tung_plastics.product_listing_path %></li>
+            <li><%= link_to "Bồn nhựa dạng ngang", erp_phuong_tung_plastics.product_listing_path %></li>
+          </ul>
+        </div>
+      </li>
+      <li><%= link_to "Giới Thiệu", erp_phuong_tung_plastics.about_us_path %></li>
+      <li><%= link_to "Liên Hệ Chúng Tôi", erp_phuong_tung_plastics.contact_path %></li>
+    </ul>
+  </nav>
+  <!--Top Menu(Horizontal Categories) End-->
+  <!-- Mobile Menu Start-->
+  <nav id="menu" class="m-menu"> <span>Chuyên Mục</span>
+    <ul>
+      <li class="categories"><a>Chuyên Mục Website</a>
+        <div>
+          <div class="column"><%= link_to "Bồn nhựa Long Nhiên dạng đứng", erp_phuong_tung_plastics.product_listing_path %></div>
+          <div class="column"><%= link_to "Bồn nhựa Long Nhiên dạng ngang", erp_phuong_tung_plastics.product_listing_path %></div>
+          <div class="column"> <%= link_to "Bồn nhựa thương hiệu khác", "javascript:void(0)" %>
+            <div>
+              <ul>
+                <li><%= link_to "Bồn nhựa dạng đứng", erp_phuong_tung_plastics.product_listing_path %></li>
+                <li><%= link_to "Bồn nhựa dạng ngang", erp_phuong_tung_plastics.product_listing_path %></li>
+              </ul>
+            </div>
+          </div>
+          <div class="column"><%= link_to "Giới Thiệu", erp_phuong_tung_plastics.about_us_path %></div>
+          <div class="column"><%= link_to "Liên Hệ Chúng Tôi", erp_phuong_tung_plastics.contact_path %></div>              
+        </div>
+      </li>
+    </ul>
+  </nav>
+  <!-- Mobile Menu End-->
+</header>
