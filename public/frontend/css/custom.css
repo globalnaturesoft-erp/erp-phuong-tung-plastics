@@ -18,7 +18,6 @@
 }
 .product-info .price-old, .product-grid .price-old {
   color: #555555;
-  font-style: italic;
 }
 #column-left .box-product .sales_price, #column-right .box-product .sales_price {
   float: left;
@@ -32,4 +31,14 @@
 }
 h1, select, input[type='text'], input[type='password'], textarea {
   font-family: Roboto, sans-serif;
+}
+.price {
+  font-family: Arial, sans-serif;
+}
+.product-grid > div.alert-empty:hover {
+  border: none;
+  padding: 11px;
+}
+#column-left .box-product .name, #column-right .box-product .name {
+  overflow: hidden;
 }

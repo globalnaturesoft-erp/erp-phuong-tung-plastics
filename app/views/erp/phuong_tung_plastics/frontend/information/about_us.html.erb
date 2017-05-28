@@ -1,16 +1,18 @@
 <!--Left Part-->
 <div id="column-left">
-  <!--Bestsellers Part Start-->
-  <%= render "erp/phuong_tung_plastics/frontend/modules/bestseller" %>
-  <!--Bestsellers Part End-->
+    <!--Bestsellers Part Start-->
+    <%= render "erp/phuong_tung_plastics/frontend/modules/bestseller" %>
+    <!--Bestsellers Part End-->
 </div>
 <!--Left End-->
 <!--Middle Part Start-->
 <div id="content">
-  <!--Breadcrumb Part Start-->
-  <div class="breadcrumb"><%= link_to "Trang Chủ", erp_phuong_tung_plastics.root_path %> &raquo; <%= link_to "Giới Thiệu", "javascript:void(0)" %></div>
-  <!--Breadcrumb Part End-->
-  <h1>Giới Thiệu</h1>
-  <p>Nội dung giới thiệu về Phương Tùng Plastic</p>  
+    <!--Breadcrumb Part Start-->
+    <div class="breadcrumb"><%= link_to "Trang Chủ", erp_phuong_tung_plastics.root_path %> &raquo; <%= link_to "Giới Thiệu", "javascript:void(0)" %></div>
+    <!--Breadcrumb Part End-->
+    <% if !@about_us.nil? %>
+        <h1><%= @about_us.name %></h1>
+        <p><%= raw @about_us.content %></p>
+    <% end %>
 </div>
 <!--Middle Part End-->

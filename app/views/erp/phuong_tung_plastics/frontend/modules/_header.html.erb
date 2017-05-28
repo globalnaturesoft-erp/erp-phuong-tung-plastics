@@ -18,16 +18,21 @@
   <nav id="menu">
     <ul>
       <li class="home"><a title="Quay về trang chủ" href="<%= erp_phuong_tung_plastics.root_path %>"><span>Trang Chủ</span></a></li>          
-      <li><%= link_to "Bồn nhựa Long Nhiên dạng đứng", erp_phuong_tung_plastics.product_listing_path %></li>
-      <li><%= link_to "Bồn nhựa Long Nhiên dạng ngang", erp_phuong_tung_plastics.product_listing_path %></li>
-      <li><%= link_to "Bồn nhựa thương hiệu khác", "javascript:void(0)" %>
-        <div>
-          <ul>
-            <li><%= link_to "Bồn nhựa dạng đứng", erp_phuong_tung_plastics.product_listing_path %></li>
-            <li><%= link_to "Bồn nhựa dạng ngang", erp_phuong_tung_plastics.product_listing_path %></li>
-          </ul>
-        </div>
-      </li>
+      <% Erp::MiniStores::Category.get_parent_categories.each do |menu| %>
+        <% if menu.children.count > 0 %>
+          <li><%= link_to menu.name, "javascript:void(0)" %>
+            <div>
+              <ul>
+                <% menu.children.each do |menu_child| %>
+                  <li><%= link_to menu_child.name, category_link(menu_child) %></li>
+                <% end %>
+              </ul>
+            </div>
+          </li>
+        <% else %>
+          <li><%= link_to menu.name, category_link(menu) %></li>
+        <% end %>
+      <% end %>
       <li><%= link_to "Giới Thiệu", erp_phuong_tung_plastics.about_us_path %></li>
       <li><%= link_to "Liên Hệ Chúng Tôi", erp_phuong_tung_plastics.contact_path %></li>
     </ul>
@@ -38,16 +43,21 @@
     <ul>
       <li class="categories"><a>Chuyên Mục Website</a>
         <div>
-          <div class="column"><%= link_to "Bồn nhựa Long Nhiên dạng đứng", erp_phuong_tung_plastics.product_listing_path %></div>
-          <div class="column"><%= link_to "Bồn nhựa Long Nhiên dạng ngang", erp_phuong_tung_plastics.product_listing_path %></div>
-          <div class="column"> <%= link_to "Bồn nhựa thương hiệu khác", "javascript:void(0)" %>
-            <div>
-              <ul>
-                <li><%= link_to "Bồn nhựa dạng đứng", erp_phuong_tung_plastics.product_listing_path %></li>
-                <li><%= link_to "Bồn nhựa dạng ngang", erp_phuong_tung_plastics.product_listing_path %></li>
-              </ul>
-            </div>
-          </div>
+          <% Erp::MiniStores::Category.get_parent_categories.each do |menu| %>
+            <% if menu.children.count > 0 %>
+              <div class="column"> <%= link_to menu.name, "javascript:void(0)" %>
+                <div>
+                  <ul>
+                    <% menu.children.each do |menu_child| %>
+                      <li><%= link_to menu_child.name, category_link(menu_child) %></li>
+                    <% end %>
+                  </ul>
+                </div>
+              </div>
+            <% else %>
+              <div class="column"><%= link_to menu.name, category_link(menu) %></div>
+            <% end %>
+          <% end %>
           <div class="column"><%= link_to "Giới Thiệu", erp_phuong_tung_plastics.about_us_path %></div>
           <div class="column"><%= link_to "Liên Hệ Chúng Tôi", erp_phuong_tung_plastics.contact_path %></div>              
         </div>

@@ -1,39 +1,39 @@
 <!--Left Part-->
 <div id="column-left">
-  <!--Bestsellers Part Start-->
-  <%= render "erp/phuong_tung_plastics/frontend/modules/bestseller" %>
-  <!--Bestsellers Part End-->
+    <!--Bestsellers Part Start-->
+    <%= render "erp/phuong_tung_plastics/frontend/modules/bestseller" %>
+    <!--Bestsellers Part End-->
 </div>
 <!--Left End-->
 <!--Middle Part Start-->
 <div id="content">
-  <!--Breadcrumb Part Start-->
-  <div class="breadcrumb"><%= link_to "Trang Chủ", erp_phuong_tung_plastics.root_path %> &raquo; <%= link_to "Liên Hệ Chúng Tôi", "javascript:void(0)" %></div>
-  <!--Breadcrumb Part End-->
-  <h1>LIÊN HỆ CHÚNG TÔI</h1>
-  <h2>GỬI LỜI NHẮN CHO CHÚNG TÔI</h2>
-  <form>
-  <div class="content">
-    <b>Họ & Tên:</b><br>
-    <input class="large-field" type="text" placeholder="Vui lòng nhập họ và tên..." name="name">
-    <br>
-    <br>
-    <b>Số điện thoại:</b><br>
-    <input class="large-field" type="text" placeholder="Vui lòng nhập số điện thoại..." name="name">
-    <br>
-    <br>
-    <b>Địa chỉ email:</b><br>
-    <input class="large-field" type="text" placeholder="Vui lòng nhập địa chỉ email" name="email">
-    <br>
-    <br>
-    <b>Nội dung lời nhắn:</b><br>
-    <textarea style="width: 90%;" rows="10" cols="40" placeholder="Vui lòng nhập nội dung cần gửi tại đây..." name="enquiry"></textarea>
-  </div>
-  <div class="buttons">
-    <div class="right">
-      <input type="submit" class="button" value="GỬI LỜI NHẮN">
-    </div>
-  </div>
-  </form>
+    <!--Breadcrumb Part Start-->
+    <div class="breadcrumb"><%= link_to "Trang Chủ", erp_phuong_tung_plastics.root_path %> &raquo; <%= link_to "Liên Hệ Chúng Tôi", "javascript:void(0)" %></div>
+    <!--Breadcrumb Part End-->
+    <h1>LIÊN HỆ CHÚNG TÔI</h1>
+    <h2>GỬI LỜI NHẮN CHO CHÚNG TÔI</h2>
+    <%= form_for '', url: erp_phuong_tung_plastics.contact_path, html: {class: "contact_form"} do |f| %>
+        <div class="content">
+            <b>Họ & Tên:</b><br>
+            <input class="large-field" type="text" placeholder="Vui lòng nhập họ và tên..." name="contact[name]">
+            <br>
+            <br>
+            <b>Số điện thoại:</b><br>
+            <input class="large-field" type="text" placeholder="Vui lòng nhập số điện thoại..." name="contact[phone]">
+            <br>
+            <br>
+            <b>Địa chỉ email:</b><br>
+            <input class="large-field" type="text" placeholder="Vui lòng nhập địa chỉ email" name="contact[email]">
+            <br>
+            <br>
+            <b>Nội dung lời nhắn:</b><br>
+            <textarea style="width: 90%;" rows="10" cols="40" placeholder="Vui lòng nhập nội dung cần gửi tại đây..." name="msg[message]"></textarea>
+        </div>
+        <div class="buttons">
+            <div class="right">
+                <input type="submit" class="button" value="GỬI LỜI NHẮN">
+            </div>
+        </div>
+    <% end %>
 </div>
 <!--Middle Part End-->

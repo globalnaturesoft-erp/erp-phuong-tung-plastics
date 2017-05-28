@@ -4,17 +4,21 @@
     <div class="box-product">
       <div class="flexslider">
         <ul class="slides">
-          <% (0..5).each do |product| %>
+          <% Erp::MiniStores::Product.get_bestseller_products.each do |product| %>
           <li>
             <div class="slide-inner">
               <div class="image">
-                <%= link_to image_tag("/frontend/image/product/small-product.jpg", alt: "", title: ""), erp_phuong_tung_plastics.product_detail_path, title: "" %>
+                <%= link_to image_tag("/frontend/image/product/small-product.jpg", alt: "", title: ""), product_link(product), title: "" %>
               </div>
               <div class="name">
-                <%= link_to "Bồn nước Long Nhiên...", erp_phuong_tung_plastics.product_detail_path, title: "" %>
+                <%= link_to product.name, product_link(product), title: product.name %>
               </div>
-              <div class="sales_price"><del>100,000đ</del></div>
-              <div class="price">100,000đ</div>
+              <% if product.is_deal? %>
+                <div class="sales_price"><del><%= format_price(product.price) %></del></div>
+                <div class="price"><%= format_price(product.deal_price) %></div>
+              <% else %>
+                <div class="price"><%= format_price(product.price) %></div>
+              <% end %>
               <div class="clear"></div>
             </div>
           </li>

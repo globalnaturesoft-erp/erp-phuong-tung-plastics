@@ -1,114 +1,118 @@
 <!--Left Part-->
 <div id="column-left">
-  <!--Bestsellers Part Start-->
-  <%= render "erp/phuong_tung_plastics/frontend/modules/bestseller" %>
-  <!--Bestsellers Part End-->
-  <!--Banner Start-->
-  <div class="banner">
-    <div>
-      <%= link_to image_tag("/frontend/image/product/small-banner1-220x350.jpg", alt: "", title: ""), "", title: "" %></div>
-  </div>
-  <!--Banner End-->
+    <!--Bestsellers Part Start-->
+    <%= render "erp/phuong_tung_plastics/frontend/modules/bestseller" %>
+    <!--Bestsellers Part End-->
+    <!--Banner Start-->
+    <div class="banner">
+        <div>
+            <%= link_to image_tag("/frontend/image/product/small-banner1-220x350.jpg", alt: "", title: ""), "", title: "" %>
+        </div>
+    </div>
+    <!--Banner End-->
 </div>
 <!--Left End-->
 <!--Middle Part Start-->
 <div id="content">
-  <div class="breadcrumb"><%= link_to "Trang Chủ", erp_phuong_tung_plastics.root_path %> &raquo; <%= link_to "Bồn nước Long Nhiên dạng đứng (300 lít)", "javascript:void(0)" %></div>
-  <h1>Bồn nước Long Nhiên dạng đứng (300 lít)</h1>
-  <div class="product-info">
-    <div class="left">
-      <div class="image">
-        <a href="/frontend/image/product/long-nhien-01.png" title="" class="cloud-zoom colorbox" id='zoom1' rel="adjustX: 0, adjustY:0, tint:'#000000',tintOpacity:0.2, zoomWidth:360, position:'inside', showTitle:false">
-          <img src="/frontend/image/product/long-nhien-02.png" title="" alt="" id="image" />
-          <span id="zoom-image"><i class="zoom_bttn"></i> Phóng to hình ảnh</span>
-        </a>
-      </div>
-      <div class="image-additional">
-        <% (0..2).each do |product_image| %>
-        <a href="/frontend/image/product/long-nhien-01.png" title="" class="cloud-zoom-gallery" rel="useZoom: 'zoom1', smallImage: '/frontend/image/product/long-nhien-02.png' ">
-          <%= image_tag "/frontend/image/product/long-nhien-02.png", width: "62", title: "", alt: "" %>
-        </a>
-        <% end %>
-      </div>
+    <div class="breadcrumb"><%= link_to "Trang Chủ", erp_phuong_tung_plastics.root_path %> &raquo;
+          <%= link_to @product.name, "javascript:void(0)" %>
     </div>
-    <div class="right">
-      <div class="description">
-        <span>Thương hiệu:</span> Long Nhiên<br>
-        <span>Dung tích:</span> 570 mm<br>
-        <span>Chiều cao:</span> 570 mm<br>
-        <span>Chiều ngang:</span> 990 mm<br>
-      </div>
-      <div class="price">
-        Giá bán: <span class="price-old">500,000đ</span> &nbsp; <span class="price-new">450,000đ</span>
-      </div>      
-    </div>
-  </div>
-  <!-- Description and Reviews Tab Start -->
-  <div id="tabs" class="htabs"><a href="#tab-description">MÔ TẢ SẢN PHẨM</a></div>
-  <div id="tab-description" class="tab-content">
-    <p>
-      Bồn nhựa Long Nhiên được sản xuất bằng hạt nhựa nguyên sinh tiêu chuẩn, kết cấu nhựa 3 lớp, khả năng chịu va đập cao, chịu nhiệt tốt, an toàn vệ sinh thực phẩm.<br>
-      Sản phẩm được bảo hành 3 năm.<br>
-      Giao hàng miễn phí trong phạm vi TP. HCM
-    </p>
-  </div>  
-  <script>
-    $(document).ready(function() {
-      $('#tabs a').tabs();
-    });
-  </script>
-  <!-- Description and Reviews Tab Start -->
-  <!--Related Product Start-->
-  <div class="box">
-    <div class="box-heading">SẢN PHẨM LIÊN QUAN (11)</div>
-    <div class="box-content">
-      <div class="box-product">
-        <div class="flexslider" id="related_pro">
-          <ul class="slides">
-            <% (0..7).each do |product| %>
-            <li>
-              <div class="slide-inner">
-                <div class="image">
-                  <%= link_to image_tag("/frontend/image/product/product-01.jpg", title: "", alt: ""), erp_phuong_tung_plastics.product_detail_path, title: "" %>
-                </div>
-                <div class="name">
-                  <%= link_to "Bồn nước nhựa Long Nhiên 300 lít (Đứng)", erp_phuong_tung_plastics.product_detail_path, title: "" %>
-                </div>
-                <div class="sales_price"><del>620,000đ</del></div>
-                <div class="price">620,000đ</div>
-                <div class="clear"></div>
-              </div>
-            </li>
-            <% end %>           
-          </ul>
+    <h1><%= @product.name %></h1>
+    <div class="product-info">
+        <div class="left">
+            <div class="image">
+                <a href="/frontend/image/product/long-nhien-01.png" title="" class="cloud-zoom colorbox" id='zoom1' rel="adjustX: 0, adjustY:0, tint:'#000000',tintOpacity:0.2, zoomWidth:360, position:'inside', showTitle:false">
+                    <img src="/frontend/image/product/long-nhien-02.png" title="" alt="" id="image" />
+                    <span id="zoom-image"><i class="zoom_bttn"></i> Phóng to hình ảnh</span>
+                </a>
+            </div>
+            <div class="image-additional">
+                <% (0..2).each do |product_image| %>
+                    <a href="/frontend/image/product/long-nhien-01.png" title="" class="cloud-zoom-gallery" rel="useZoom: 'zoom1', smallImage: '/frontend/image/product/long-nhien-02.png' ">
+                        <%= image_tag "/frontend/image/product/long-nhien-02.png", width: "62", title: "", alt: "" %>
+                    </a>
+                <% end %>
+            </div>
         </div>
-      </div>
+        <div class="right">
+            <div class="description">
+                <span>Thương hiệu:</span> <%= @product.brand_name %><br>
+                <span>Dung tích:</span> 570 mm<br>
+                <span>Chiều cao:</span> 570 mm<br>
+                <span>Chiều ngang:</span> 990 mm<br>
+            </div>
+            <div class="price">
+                Giá bán:
+                <% if @product.is_deal? %>
+                    <span class="price-old"><%= format_price(@product.price) %></span> &nbsp; <span class="price-new"><%= format_price(@product.deal_price) %></span>
+                <% else %>
+                    <span class="price-new"><%= format_price(@product.price) %></span>
+                <% end %>
+            </div>      
+        </div>
     </div>
-  </div>
-  <script type="text/javascript">
-    (function() {
-      // store the slider in a local variable
-      var $window = $(window),
-        flexslider;
-      // tiny helper function to add breakpoints
-      function getGridSize() {
-        return (window.innerWidth < 320) ? 1 :
-          (window.innerWidth < 600) ? 2 :
-          (window.innerWidth < 800) ? 3 :
-          (window.innerWidth < 900) ? 3 : 4;
-      }
-      $window.load(function() {
-        $('#content #related_pro').flexslider({
-          animation: "slide",
-          animationLoop: false,
-          slideshow: false,
-          itemWidth: 210,
-          minItems: getGridSize(), // use function to pull in initial value
-          maxItems: getGridSize() // use function to pull in initial value
+    <!-- Description and Reviews Tab Start -->
+    <div id="tabs" class="htabs"><a href="#tab-description">MÔ TẢ SẢN PHẨM</a></div>
+    <div id="tab-description" class="tab-content">
+        <%= raw @product.description %>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $('#tabs a').tabs();
         });
-      });
-    }());
-  </script>
-  <!--Related Product End-->
+    </script>
+    <!-- Description and Reviews Tab Start -->
+    <!--Related Product Start-->
+    <div class="box">
+        <div class="box-heading">SẢN PHẨM LIÊN QUAN (11)</div>
+        <div class="box-content">
+            <div class="box-product">
+                <div class="flexslider" id="related_pro">
+                    <ul class="slides">
+                        <% (0..7).each do |product| %>
+                            <li>
+                                <div class="slide-inner">
+                                    <div class="image">
+                                        <%= link_to image_tag("/frontend/image/product/product-01.jpg", title: "", alt: ""), erp_phuong_tung_plastics.product_detail_path, title: "" %>
+                                    </div>
+                                    <div class="name">
+                                        <%= link_to "Bồn nước nhựa Long Nhiên 300 lít (Đứng)", erp_phuong_tung_plastics.product_detail_path, title: "" %>
+                                    </div>
+                                    <div class="sales_price"><del>620,000đ</del></div>
+                                    <div class="price">620,000đ</div>
+                                    <div class="clear"></div>
+                                </div>
+                            </li>
+                        <% end %>           
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        (function() {
+            // store the slider in a local variable
+            var $window = $(window),
+              flexslider;
+            // tiny helper function to add breakpoints
+            function getGridSize() {
+              return (window.innerWidth < 320) ? 1 :
+                (window.innerWidth < 600) ? 2 :
+                (window.innerWidth < 800) ? 3 :
+                (window.innerWidth < 900) ? 3 : 4;
+            }
+            $window.load(function() {
+              $('#content #related_pro').flexslider({
+                animation: "slide",
+                animationLoop: false,
+                slideshow: false,
+                itemWidth: 210,
+                minItems: getGridSize(), // use function to pull in initial value
+                maxItems: getGridSize() // use function to pull in initial value
+              });
+            });
+        }());
+    </script>
+    <!--Related Product End-->
 </div>
 <!--Middle Part End-->
