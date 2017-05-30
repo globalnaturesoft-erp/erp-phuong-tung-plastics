@@ -17,6 +17,15 @@ module Erp
         erp_phuong_tung_plastics.product_detail_path(product_id: product.id, title: url_friendly(product.name))
       end
       
+      # product image
+      def product_image(product, thumb)
+        if product.product_images.present?
+          product.main_image.image_url.send(thumb).url
+        else
+          url_for('/frontend/image/product/no-image.png')
+        end
+      end
+      
     end
   end
 end

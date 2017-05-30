@@ -39,7 +39,7 @@
             <% @products.each do |product| %>
                 <div>
                     <div class="image">
-                        <%= link_to image_tag("/frontend/image/product/long-nhien-03.png", title: product.name, alt: product.name), product_link(product), title: product.name %>
+                        <%= link_to image_tag(product_image(product, 'thumb350280'), title: product.name, alt: product.name, width: "162"), product_link(product), title: product.name %>
                     </div>
                     <div class="name">
                         <%= link_to product.name, product_link(product), title: product.name %>
@@ -58,16 +58,8 @@
     </div>
     <!--Product Grid End-->
     <!--Pagination Part Start-->
-    <div class="pagination">
-        <div class="links">
-            <b>←</b>
-            <b>1</b>
-            <a href="">2</a>
-            <a href="">3</a>
-            <a href="">→</a>
-            <!--<%= will_paginate @products, previous_label: '←', next_label: '→', renderer: BootstrapPagination::Rails %>-->
-        </div>
-        <div class="results">Hiển thị 20/22 sản phẩm.</div>
+    <div class="links">
+        <%= will_paginate @products, previous_label: '←', next_label: '→', renderer: BootstrapPagination::Rails %>
     </div>
     <!--Pagination Part End-->
 </div>

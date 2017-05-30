@@ -15,12 +15,12 @@ module Erp
                 if @msg.save
                   #Erp::Contacts::ContactMailer.sending_email_contact(@msg).deliver_now
                   format.html {
-                    redirect_to :back, notice: 'Yêu cầu đã gửi thành công. Chúng tôi sẽ liên hệ cho bạn trong thời gian sớm nhất.'
+                    redirect_to erp_phuong_tung_plastics.success_path, flash: { notice: 'Yêu cầu đã gửi thành công. Chúng tôi sẽ liên hệ cho bạn trong thời gian sớm nhất.'}
                   }
                 end
               end
             else
-              redirect_to :back, flash: { error: 'Xin lỗi! Nội dung tin nhắn không thể gửi. Vui lòng kiểm tra lại thông tin đã nhập.' }
+              redirect_to :back, flash: { error: 'Chặn! Vui lòng kiểm tra lại thông tin đã nhập.' }
             end
           end
         end

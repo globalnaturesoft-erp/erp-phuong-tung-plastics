@@ -42,3 +42,34 @@ h1, select, input[type='text'], input[type='password'], textarea {
 #column-left .box-product .name, #column-right .box-product .name {
   overflow: hidden;
 }
+.buttons {
+  border-top: none; 
+  overflow: auto;
+  padding: 0px 16px 0px 0px;
+  margin-bottom: 20px;
+}
+.center {
+  text-align: center;
+}
+
+.links .pagination.pagination li.prev.disabled, .links .pagination.pagination li.next.disabled, .links .pagination.pagination li.active {
+  vertical-align: middle;
+  display: inline-block;
+  border: 1px solid #3598dc;
+  padding: 4px 10px;
+  font-weight: normal;
+  text-decoration: none;
+  color: #fff;
+  background: #3598dc;
+}
+.links .pagination.pagination li {
+  vertical-align: middle;
+  display: inline-block;
+  border: 1px solid #EEEEEE;
+  text-decoration: none;
+  color: #777;
+}
+.links .pagination.pagination li a {
+  display: block;
+  padding: 4px 10px;
+}

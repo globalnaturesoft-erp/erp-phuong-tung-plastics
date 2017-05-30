@@ -18,7 +18,7 @@
             <li>
               <div class="slide-inner">
                 <div class="image">
-                  <%= link_to image_tag("/frontend/image/product/product-01.jpg", title: product.name, alt: product.name), product_link(product), title: product.name %>
+                  <%= link_to image_tag(product_image(product, 'thumb350280'), title: product.name, alt: product.name, width: "178"), product_link(product), title: product.name %>
                 </div>
                 <div class="name">
                   <%= link_to product.name, product_link(product), title: product.name %>
@@ -74,14 +74,14 @@
       <div class="box-product">
         <div class="flexslider latest_carousel_tab">
           <ul class="slides">
-            <% Erp::MiniStores::Product.all.each do |product| %>
+            <% Erp::MiniStores::Product.get_vertical_products.each do |product| %>
             <li>
               <div class="slide-inner">
                 <div class="image">
-                  <%= link_to image_tag("/frontend/image/product/product-01.jpg", title: "", alt: ""), product_link(product), title: "" %>
+                  <%= link_to image_tag(product_image(product, 'thumb350280'), title: product.name, alt: product.name, width: "178"), product_link(product), title: product.name %>
                 </div>
                 <div class="name">
-                  <%= link_to "Bồn nước nhựa Long Nhiên 300 lít (Đứng)", product_link(product), title: "" %>
+                  <%= link_to product.name, product_link(product), title: product.name %>
                 </div>
                 <% if product.is_deal? %>
                   <div class="sales_price"><del><%= format_price(product.price) %></del></div>
@@ -101,14 +101,14 @@
       <div class="box-product">
         <div class="flexslider bestseller_carousel_tab">
           <ul class="slides">
-            <% Erp::MiniStores::Product.all.each do |product| %>
+            <% Erp::MiniStores::Product.get_horizontal_products.each do |product| %>
             <li>
               <div class="slide-inner">
                 <div class="image">
-                  <%= link_to image_tag("/frontend/image/product/product-01.jpg", title: "", alt: ""), product_link(product), title: "" %>
+                  <%= link_to image_tag(product_image(product, 'thumb350280'), title: product.name, alt: product.name, width: "178"), product_link(product), title: product.name %>
                 </div>
                 <div class="name">
-                  <%= link_to "Bồn nước nhựa Long Nhiên 300 lít (Đứng)", product_link(product), title: "" %>
+                  <%= link_to product.name, product_link(product), title: product.name %>
                 </div>
                 <% if product.is_deal? %>
                   <div class="sales_price"><del><%= format_price(product.price) %></del></div>

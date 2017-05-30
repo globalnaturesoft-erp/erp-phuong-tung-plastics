@@ -1,18 +1,15 @@
 <section class="slider-wrapper">
   <div id="slideshow" class="nivoSlider">
-    <a class="nivo-imageLink" href="">
-      <img src="/frontend/image/slider/slide-1.jpg" alt="slide-1" />
-    </a>
-    <a class="nivo-imageLink" href="">
-      <img src="/frontend/image/slider/slide-2.jpg" alt="slide-2" />
-    </a>
-    <a class="nivo-imageLink" href="">
-      <img src="/frontend/image/slider/slide-3.jpg" alt="slide-3" />
-    </a>
+    <!-- Size 1000x350 -->
+    <% @sliders.each do |slider| %>
+      <%= link_to image_tag(slider.image_url.thumb, alt: slider.name, class: "nivo-imageLink"), slider.link_url, title: slider.name %>
+    <% end %>  
   </div>
 </section>
-<script type="text/javascript">
-  $(document).ready(function() {
-    $('#slideshow').nivoSlider();
-  });
-</script>
+<% if @sliders.count > 0 %>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('#slideshow').nivoSlider();
+    });
+  </script>
+<% end %>

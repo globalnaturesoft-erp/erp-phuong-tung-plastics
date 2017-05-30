@@ -11,29 +11,48 @@
     <div class="breadcrumb"><%= link_to "Trang Chủ", erp_phuong_tung_plastics.root_path %> &raquo; <%= link_to "Liên Hệ Chúng Tôi", "javascript:void(0)" %></div>
     <!--Breadcrumb Part End-->
     <h1>LIÊN HỆ CHÚNG TÔI</h1>
-    <h2>GỬI LỜI NHẮN CHO CHÚNG TÔI</h2>
-    <%= form_for '', url: erp_phuong_tung_plastics.contact_path, html: {class: "contact_form"} do |f| %>
-        <div class="content">
-            <b>Họ & Tên:</b><br>
-            <input class="large-field" type="text" placeholder="Vui lòng nhập họ và tên..." name="contact[name]">
-            <br>
-            <br>
-            <b>Số điện thoại:</b><br>
-            <input class="large-field" type="text" placeholder="Vui lòng nhập số điện thoại..." name="contact[phone]">
-            <br>
-            <br>
-            <b>Địa chỉ email:</b><br>
-            <input class="large-field" type="text" placeholder="Vui lòng nhập địa chỉ email" name="contact[email]">
-            <br>
-            <br>
-            <b>Nội dung lời nhắn:</b><br>
-            <textarea style="width: 90%;" rows="10" cols="40" placeholder="Vui lòng nhập nội dung cần gửi tại đây..." name="msg[message]"></textarea>
+    
+    <div class="contact-info">
+      <div class="content">
+        <div class="left">
+            <h2>THÔNG TIN LIÊN HỆ</h2>
+            <h4>
+                <b>Công Ty TNHH MTV Phương Tùng</b><br />
+                <b>Tên giao dịch: PT CO., LTD</b>
+            </h4>
+            280/128 Đường ĐT2, Ấp 2, Xã Đông Thạnh, Huyện Hóc Môn, <br />Thành phố Hồ Chí Minh<br />
+            Điện thoại: <a href="tel:08 6271 8845">(08) 6271 8845</a> - <a href="tel:08 6271 8846">(08) 6271 8846</a><br>
+            Email: <a href="mailto:phongvt@phuongtungplastics.com">phongvt@phuongtungplastics.com</a> <br>
         </div>
-        <div class="buttons">
-            <div class="right">
-                <input type="submit" class="button" value="GỬI LỜI NHẮN">
-            </div>
+        
+        <div class="right">
+            <h2>GỬI LỜI NHẮN CHO CHÚNG TÔI</h2>
+            <%= form_for '', url: erp_phuong_tung_plastics.contact_path, html: {class: "contact_form"} do |f| %>
+                <div class="content">
+                    <b>Họ & Tên:</b><br>
+                    <input class="large-field" type="text" placeholder="Vui lòng nhập họ và tên..." name="contact[name]">
+                    <br>
+                    <br>
+                    <b>Số điện thoại:</b><br>
+                    <input class="large-field" type="text" placeholder="Vui lòng nhập số điện thoại..." name="contact[phone]">
+                    <br>
+                    <br>
+                    <b>Địa chỉ email:</b><br>
+                    <input class="large-field" type="text" placeholder="Vui lòng nhập địa chỉ email" name="contact[email]">
+                    <br>
+                    <br>
+                    <b>Nội dung lời nhắn:</b><br>
+                    <textarea style="width: 89%;" rows="5" cols="10" placeholder="Vui lòng nhập nội dung cần gửi tại đây..." name="msg[message]"></textarea>
+                    <br>
+                    <br>
+                    <div class="buttons">
+                        <div class="right">
+                            <input type="submit" class="button" value="GỬI LỜI NHẮN">
+                        </div>
+                    </div>
+                </div>
+            <% end %>
         </div>
-    <% end %>
+    </div>
 </div>
 <!--Middle Part End-->
