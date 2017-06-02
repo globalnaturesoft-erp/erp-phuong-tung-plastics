@@ -23,7 +23,7 @@
                 <div class="name">
                   <%= link_to product.name, product_link(product), title: product.name %>
                 </div>
-                <% if product.is_deal? %>
+                <% if product.is_deal == 'true' %>
                   <div class="sales_price"><del><%= format_price(product.price) %></del></div>
                   <div class="price"><%= format_price(product.deal_price) %></div>
                 <% else %>
@@ -83,7 +83,7 @@
                 <div class="name">
                   <%= link_to product.name, product_link(product), title: product.name %>
                 </div>
-                <% if product.is_deal? %>
+                <% if product.is_deal == 'true' %>
                   <div class="sales_price"><del><%= format_price(product.price) %></del></div>
                   <div class="price"><%= format_price(product.deal_price) %></div>
                 <% else %>
@@ -110,7 +110,7 @@
                 <div class="name">
                   <%= link_to product.name, product_link(product), title: product.name %>
                 </div>
-                <% if product.is_deal? %>
+                <% if product.is_deal == 'true' %>
                   <div class="sales_price"><del><%= format_price(product.price) %></del></div>
                   <div class="price"><%= format_price(product.deal_price) %></div>
                 <% else %>

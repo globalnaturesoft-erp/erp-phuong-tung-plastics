@@ -73,3 +73,6 @@ h1, select, input[type='text'], input[type='password'], textarea {
   display: block;
   padding: 4px 10px;
 }
+#column-left .box-product .image {
+  max-width: 25%;
+}

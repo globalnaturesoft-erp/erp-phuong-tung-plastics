@@ -8,12 +8,12 @@
           <li>
             <div class="slide-inner">
               <div class="image">
-                <%= link_to image_tag("/frontend/image/product/small-product.jpg", alt: "", title: ""), product_link(product), title: "" %>
+                <%= link_to image_tag(product_image(product, 'thumb350280'), alt: product.name, title: product.name, width: "45"), product_link(product), title: product.name %>
               </div>
               <div class="name">
                 <%= link_to product.name, product_link(product), title: product.name %>
               </div>
-              <% if product.is_deal? %>
+              <% if product.is_deal == 'true' %>
                 <div class="sales_price"><del><%= format_price(product.price) %></del></div>
                 <div class="price"><%= format_price(product.deal_price) %></div>
               <% else %>

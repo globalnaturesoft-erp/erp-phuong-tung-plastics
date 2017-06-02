@@ -47,7 +47,7 @@
             </div>
             <div class="price">
                 Giá bán:
-                <% if @product.is_deal? %>
+                <% if @product.is_deal == 'true' %>
                     <span class="price-old"><%= format_price(@product.price) %></span> &nbsp; <span class="price-new"><%= format_price(@product.deal_price) %></span>
                 <% else %>
                     <span class="price-new"><%= format_price(@product.price) %></span>
@@ -82,7 +82,7 @@
                                     <div class="name">
                                         <%= link_to product.name, product_link(product), title: product.name %>
                                     </div>
-                                    <% if product.is_deal? %>
+                                    <% if product.is_deal == 'true' %>
                                         <div class="sales_price"><del><%= format_price(product.price) %></del></div>
                                         <div class="price"><%= format_price(product.deal_price) %></div>
                                     <% else %>
