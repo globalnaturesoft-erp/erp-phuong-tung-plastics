@@ -17,7 +17,7 @@
   <!--Top Menu(Horizontal Categories) Start-->
   <nav id="menu">
     <ul>
-      <li class="home"><a title="Quay về trang chủ" href="<%= erp_phuong_tung_plastics.root_path %>"><span>Trang Chủ</span></a></li>          
+      <li class=""><a title="Quay về trang chủ" href="<%= erp_phuong_tung_plastics.root_path %>"><span>Trang Chủ</span></a></li>          
       <% Erp::MiniStores::Category.get_parent_categories.each do |menu| %>
         <% if menu.children.count > 0 %>
           <li><%= link_to menu.name, "javascript:void(0)" %>
@@ -34,6 +34,7 @@
         <% end %>
       <% end %>
       <li><%= link_to "Giới Thiệu", erp_phuong_tung_plastics.about_us_path %></li>
+      <li><%= link_to "Hướng Dẫn Lắp Đặt", '' %></li>
       <li><%= link_to "Liên Hệ Chúng Tôi", erp_phuong_tung_plastics.contact_path %></li>
     </ul>
   </nav>
