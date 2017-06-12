@@ -79,3 +79,78 @@ h1, select, input[type='text'], input[type='password'], textarea {
 #menu > ul > li > a {
   padding: 0px 17px 0px 16px;
 }
+#footer .powered_text {
+  width: auto;
+}
+#footer .contact {
+  width: 32%;
+}
+#footer .care {
+  width: 25%;
+  margin-right: 45px;
+}
+#footer .content-footer {
+  margin-right: 45px;
+  width: 30%;
+}
+#footer .contact ul {
+  width: auto;
+}
+p.justify {
+  text-align: justify;
+}
+#footer .content-footer p.justify {
+  text-align: justify;
+}
+@media screen and (max-width: 1056px) {
+  #footer .content-footer {
+    margin-right: 40px;
+  }
+  #footer .care {
+    margin-right: 40px;
+  }
+}
+@media screen and (max-width: 923px) {
+  #footer .content-footer {
+    margin-right: 30px;
+  }
+  #footer .care {
+    margin-right: 30px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #footer .care ul {
+    display: block;
+  }
+  #footer .contact {
+    width: auto;
+  }
+  #footer .contact ul {
+    display: block;
+    text-align: center;
+  }
+  #footer .contact_icon ul li {
+    background: none;
+  }
+  #footer .powered_text {
+    text-align: center;
+  }
+  #footer .care:hover ul {
+    display: block;
+  }
+  #footer .contact ul li {
+    padding: 0;
+  }
+  #footer h3 {
+    padding: 10px 0 0 0;
+  }
+  #footer .care ul, #footer .contact ul {
+    padding: 0 0 10px;
+  }
+  #footer .contact ul li {
+    min-height: 0;
+  }
+  #footer .contact ul li.phone, #footer .contact ul li.email {
+    line-height: normal;
+  }
+}
