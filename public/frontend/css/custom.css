@@ -6,7 +6,7 @@
 }
 #menu > ul > li:hover > a {
   color: #fff;
-  background: #e43a45;
+  background: #f8941d;
 }
 .box-product .sales_price {
   display: block;
@@ -96,12 +96,65 @@ h1, select, input[type='text'], input[type='password'], textarea {
 #footer .contact ul {
   width: auto;
 }
+.welcome_text {
+  font-size: 125%;
+  font-family: monospace;
+  font-weight: normal;
+}
 p.justify {
   text-align: justify;
 }
 #footer .content-footer p.justify {
   text-align: justify;
 }
+#footer, #footer a {
+  color: #ccc;
+}
+#footer .ct_info.contact_icon ul li {
+  background-size: 6%;
+}
+#footer .ct_info.contact ul li {
+  min-height: auto;
+}
+#footer .contact ul li.address {
+  background-position: 0px 8px;
+  line-height: inherit;
+}
+#footer .contact ul li.mobile {
+  background-position: 0px -39px;
+  line-height: inherit;
+}
+#footer .contact ul li.fax {
+  background-position: 0px -117px;
+  line-height: inherit;
+}
+#footer .contact ul li.email {
+  background-position: 0px -78px;
+  line-height: inherit;
+}
+#footer h3 {
+  border-bottom: 1px solid #444;
+  font-weight: 500;
+}
+#footer #powered {
+  border-top: 1px solid #444;
+}
+.product-tab .tabs {
+  border-bottom: 1px solid rgba(248, 148, 29, 0.73);
+}
+.product-tab .tabs li a {
+  font-weight: 500;
+}
+.product-tab .tabs li.active a {
+  border-top: 1px solid rgba(248, 148, 29, 0.73);
+  border-left: 1px solid rgba(248, 148, 29, 0.73);
+  border-right: 1px solid rgba(248, 148, 29, 0.73);
+}
+.box .box-heading {
+  border-bottom: 1px solid rgba(237, 138, 0, 0.8);
+  font-weight: 500;
+}
+
 @media screen and (max-width: 1056px) {
   #footer .content-footer {
     margin-right: 40px;
