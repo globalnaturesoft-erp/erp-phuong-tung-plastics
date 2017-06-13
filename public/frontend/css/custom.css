@@ -119,6 +119,7 @@ p.justify {
 #footer .contact ul li.address {
   background-position: 0px 8px;
   line-height: inherit;
+  padding-top: 2%;
 }
 #footer .contact ul li.mobile {
   background-position: 0px -39px;
@@ -133,11 +134,7 @@ p.justify {
   line-height: inherit;
 }
 #footer h3 {
-  border-bottom: 1px solid #444;
   font-weight: 500;
-}
-#footer #powered {
-  border-top: 1px solid #444;
 }
 .product-tab .tabs {
   border-bottom: 1px solid rgba(248, 148, 29, 0.73);
