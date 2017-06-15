@@ -45,8 +45,12 @@
                         <%= link_to product.name, product_link(product), title: product.name %>
                     </div>      
                     <div class="price">
-                        <span class="price-old"><%= format_price(product.price) %></span>
-                        <span class="price-new"><%= format_price(product.price) %></span>
+                        <% if product.is_deal == 'true' %>
+                            <span class="price-old"><%= format_price(product.price) %></span>
+                            <span class="price-new"><%= format_price(product.deal_price) %></span>
+                        <% else %>
+                            <div class="price-new"><%= format_price(product.price) %></div>
+                        <% end %>
                     </div>
                 </div>
             <% end %>
