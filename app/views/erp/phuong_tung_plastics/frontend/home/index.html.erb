@@ -27,7 +27,7 @@
                   <div class="sales_price"><del><%= format_price(product.price) %></del></div>
                   <div class="price"><%= format_price(product.deal_price) %></div>
                 <% else %>
-                  <div class="price"><%= format_price(product.price) %></div>
+                  <div class="price"><%= product.price.to_i == 0 ? 'Giá liên hệ' : format_price(product.price) %></div>
                 <% end %>  
                 <div class="clear"></div>
               </div>
@@ -87,7 +87,7 @@
                   <div class="sales_price"><del><%= format_price(product.price) %></del></div>
                   <div class="price"><%= format_price(product.deal_price) %></div>
                 <% else %>
-                  <div class="price"><%= format_price(product.price) %></div>
+                  <div class="price"><%= product.price.to_i == 0 ? 'Giá liên hệ' : format_price(product.price) %></div>
                 <% end %>
                 <div class="clear"></div>
               </div>
@@ -114,7 +114,7 @@
                   <div class="sales_price"><del><%= format_price(product.price) %></del></div>
                   <div class="price"><%= format_price(product.deal_price) %></div>
                 <% else %>
-                  <div class="price"><%= format_price(product.price) %></div>
+                  <div class="price"><%= product.price.to_i == 0 ? 'Giá liên hệ' : format_price(product.price) %></div>
                 <% end %>
                 <div class="clear"></div>
               </div>
