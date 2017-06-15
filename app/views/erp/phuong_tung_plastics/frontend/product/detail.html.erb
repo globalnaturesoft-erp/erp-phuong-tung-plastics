@@ -50,7 +50,7 @@
                 <% if @product.is_deal == 'true' %>
                     <span class="price-old"><%= format_price(@product.price) %></span> &nbsp; <span class="price-new"><%= format_price(@product.deal_price) %></span>
                 <% else %>
-                    <span class="price-new"><%= product.price.to_i == 0 ? 'Giá liên hệ' : format_price(@product.price) %></span>
+                    <span class="price-new"><%= @product.price.to_i == 0 ? 'Giá liên hệ' : format_price(@product.price) %></span>
                 <% end %>
             </div>      
         </div>
